@@ -13,7 +13,7 @@
         delay: "{{ lxc_reboot_wait_delay }}"
         timeout: "{{ lxc_reboot_wait_timeout }}"
   when: not ansible_check_mode
-  tags: molecule-notest
+  tags: molecule-idempotence-notest
 
 - name: wait for state=running
   command: "{{ lxc_reboot_check_command }}"
